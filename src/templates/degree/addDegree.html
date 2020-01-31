@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <form method="POST"> 
+        {{ csrf_input }}
+        Enter the degree name: <input type="text" name="degreeName" placeholder="Ex. Computer Science"> 
+        
+        <!--- is it a Uncore or an elective-->
+        {# jinja comments #}
+        {# this div is for university core #}
+        <h2>Univeristy Core</h2>
+        <div id="uniCore">
+            <div id="1">
+                <b>Enter the name of the University Core section: </b>
+                <input type="text" name="sectionName" placeholder="Ex. Communications">
+                <br><br>
+                <b>Enter the number of credits for the section: </b>
+                <input type="text" name="coreSectionHours" placeholder="Ex. 5">
+            </div>   
+        </div>
+        <button id="coreButton"> Add Another Section </button>
+        <div id= "degreeRequirement">
+            <div id="dR1">
+                <h2>Degree Requirements</h2>
+                <input type="radio" value="elective">Elective<br>
+                <input type="radio" value="degree requirement"> Major Requirement<br>
+                <div>
+                    Enter the Degree Requirement Section: <input type="text" name="degreeRequirements">
+                </div>
+                <b>Enter the number of credits for the section: </b>
+                    <input type="text" name="degreeSectionHours" placeholder="Ex. 5">
+                    <br>
+                <b>Enter the name of the course: </b>
+                    <input type='text' name='courseName' placeholder='Ex. CSCE 1030'>
+                    <button id="courseButton"> Add Another Course </button>
+            </div>
+        </div>
+        <button id="newSectionButton"> Add Another Section</button>
+        <button type="submit"> Submit </button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- 
+    This html document is the root of the application. All other
+    html files inherit this document. However, we will only have
+    a single page.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- Bootstrap css -->
+        <link rel="shortcut icon" type="image/png" href="{{static('img/favicon.png')}}"> <!-- favicon -->
+        <title>CSCE 4901 UNT Degree Plan</title>
+        <link rel="stylesheet" href="{{static ('CSS/style.css')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{{static ('js/jsScripts.js') }}"></script>
+    </head>
+    <body style="background-image: url({{static('img/background2.png')}});">
+
+        {% include 'navbar.html' %}
+
+        <div class="container">
+            {% block content %}
+            We can still put stuff here
+            {% endblock %}
+        </div>
+    </body>
+</html>

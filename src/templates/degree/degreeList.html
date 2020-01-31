@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Select a Degree:</h1>
+
+<div id="degreeDropdown">
+    <form method='POST'>
+        {{ csrf_input }}
+        {{ form }}
+        <button type='submit' class= "btn btn-success">
+            Submit
+        </button>
+    </form>
+
+</div>
+
+
+{% endblock %}
