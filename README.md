@@ -36,7 +36,7 @@ NOTES
 	python manage.py makemigrations
 	python manage.py migrate
 ```
-7. Lastly, you can launch the server using the line\
+7. Lastly, you can launch the server using the line\ (Remember that you must have the env active on your terminal)
       `python manage.py runserver`
 
 
